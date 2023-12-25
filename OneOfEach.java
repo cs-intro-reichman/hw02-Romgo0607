@@ -15,26 +15,22 @@ public class OneOfEach {
 		while(enough == false)
 		{
 			boyORgirl = (int)(Math.random() * 2);
-			
 			if(boyORgirl == 0)
 			{
-				guess = 'g';
+				System.out.print("g ");
 				girls++;
 			}
 			else
 			{
-				guess = 'b';
+				System.out.print("b ");
 				boys++;
 			}
-
-			System.out.print(" " + guess);
-
-			if((girls > 1) && (boys > 1))
+			if((boys > 0) && (girls > 0))
 			{
+				System.out.println();
+				System.out.println("You made it... and you now have " + (girls + boys) + " children");
 				enough = true;
 			}
 		}
-		System.out.println();
-		System.out.println("You made it... and you now have " + (girls + boys) + " children");
 	}
 }
