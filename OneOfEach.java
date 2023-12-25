@@ -10,9 +10,9 @@ public class OneOfEach {
 		char guess;
 		int boys = 0;
 		int girls = 0;
+		boolean enough = false;
 
-
-		while((girls < 2) && (boys < 2))
+		while(enough == false)
 		{
 			boyORgirl = (int)(Math.random() * 2);
 			
@@ -28,8 +28,13 @@ public class OneOfEach {
 			}
 
 			System.out.print(" " + guess);
+
+			if((girls > 1) && (boys > 1))
+			{
+				enough = true;
+			}
 		}
 		System.out.println();
-		System.out.println("You made it... and you now have " + (girls + boys)+ " children");
+		System.out.println("You made it... and you now have " + (girls + boys) + " children");
 	}
 }
