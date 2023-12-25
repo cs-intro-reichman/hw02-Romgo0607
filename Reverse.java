@@ -6,17 +6,22 @@ public class Reverse {
 	public static void main (String[] args)
 	{
 		String word = args[0];
+
 		int middle;
-		if(word.length() % 2 == 0) //this means that the length isn't exual
+		char outLetter;
+
+		if(word.length() % 2 == 0) //this means that the length isn't equal
 			{
 				middle = (word.length() + 1) / 2;
+				outLetter = word.charAt(middle);
 			}
 		else
 			{
 				middle = word.length() / 2;
+				outLetter = word.charAt(middle);
 			}
 
-		char outLetter = word.charAt(middle);
+		
 
 		int i = word.length()-1;
 
