@@ -21,8 +21,6 @@ public class Reverse {
 				outLetter = word.charAt(middle);
 			}
 
-		
-
 		int i = word.length()-1;
 
 		while(i >= 0)
@@ -31,6 +29,7 @@ public class Reverse {
 			System.out.print(letter);
 			i--;
 		}
+		
 		System.out.println();
 		System.out.println("The middle character is " + outLetter);
 	}
