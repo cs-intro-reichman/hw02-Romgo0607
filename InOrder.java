@@ -8,9 +8,9 @@ public class InOrder {
 		int biggestNum = ((int)(Math.random() * 10));
 		System.out.print(biggestNum);
 
-		int num = 1;
+		int num;
 
-		while(num < 9)
+		while(biggestNum < 9)
 			{
 				num = ((int)(Math.random() * 10));
 				if(num >= biggestNum)
@@ -19,6 +19,6 @@ public class InOrder {
 						biggestNum = num;
 					}
 			}
-		System.out.println(" 9");
+
 	}
 }
