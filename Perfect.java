@@ -20,7 +20,7 @@ public class Perfect {
 
 			if(sum == num)
 				{
-					System.out.print(num + " is a perfect number since 1 + " + num + " = ");
+					System.out.print(num + " is a perfect number since " + num + " = + 1 ");
 					System.out.print(pelet);
 				}
 			else
