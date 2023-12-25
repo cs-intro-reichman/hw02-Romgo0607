@@ -3,7 +3,22 @@
  *  as long as they form a non-decreasing sequence.
  */
 public class InOrder {
-	public static void main (String[] args) {
-		//// Write your code here
+	public static void main (String[] args) 
+	{
+		int biggestNum = ((int)(Math.random() * 10));
+		System.out.print(biggestNum);
+
+		int num = 1;
+
+		while(num < 9)
+			{
+				num = ((int)(Math.random() * 10));
+				if(num >= biggestNum)
+					{
+						System.out.print(" " + num);
+						biggestNum = num;
+					}
+			}
+		System.out.println(" 9");
 	}
 }
