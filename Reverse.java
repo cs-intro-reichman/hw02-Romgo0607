@@ -13,7 +13,7 @@ public class Reverse {
 		if(word.length() % 2 == 0) //this means that the length isn't equal
 			{
 				middle = (word.length() + 1) / 2;
-				outLetter = word.charAt(middle + 1);
+				outLetter = word.charAt(middle - 1);
 			}
 		else
 			{
