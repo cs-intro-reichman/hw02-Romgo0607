@@ -13,7 +13,7 @@ public class Perfect {
 			{
 				if(num % i == 0)
 				{
-					pelet = pelet + " + " + i;
+					pelet = pelet + i + " + ";
 					sum = sum + i;
 				}
 			}
