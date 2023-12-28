@@ -13,11 +13,12 @@ public class DamkaBoard {
 				System.out.print(" ");
 			}
 
-			for(int j = 1; j < num; j++)
+			for(int j = 1; j <= num; j++)
 			{
 				System.out.print("* ");
 			}
-			System.out.print("*");
+
+			System.out.print("* ");
 			System.out.println();
 		}
 	}
