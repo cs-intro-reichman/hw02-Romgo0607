@@ -7,7 +7,6 @@ public class OneOfEach {
 	public static void main (String[] args) 
 	{
 		int boyORgirl;
-		char guess;
 		int boys = 0;
 		int girls = 0;
 		boolean enough = false;

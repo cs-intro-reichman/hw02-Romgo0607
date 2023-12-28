@@ -9,21 +9,88 @@ import java.util.Random;
  */
 public class OneOfEachStats {
 	public static void main (String[] args) {
-		// Gets the two command-line arguments
-		int T = Integer.parseInt(args[0]);
+
+		int families = Integer.parseInt(args[0]);
 		int seed = Integer.parseInt(args[1]);
-		// Initailizes a random numbers generator with the given seed value
-        Random generator = new Random(seed);  
 		
-		//// In the previous version of this program, you used a statement like:
-		//// double rnd = Math.random();
-		//// Where "rnd" is the variable that stores the generated random value.
-		//// In this version of the program, replace this statement with:
-		//// double rnd = generator.nextDouble();
-		//// This statement will generate a random value in the range [0,1),
-		//// just like you had in the previous version, except that the 
-		//// randomization will be based on the given seed.
-		//// This is the only change that you have to do in the program.
-		    
+        int i = 1;
+
+		//int boyORgirl;
+		int boys = 0;
+		int girls = 0;
+
+		boolean enough = false;
+
+		int sumKidsAvrege = 0;
+
+		int TwoMembers = 0;
+		int ThreeMembers = 0;
+		int FourOrMoreMembers = 0;
+
+		while(i <= families)
+		{
+			while(enough == false)
+			{
+				Random boyORgirl = new Random(seed);  
+				if(boyORgirl == 0)
+				{
+					System.out.print("g ");
+					girls++;
+				}
+				else
+				{
+					System.out.print("b ");
+					boys++;
+				}
+
+				if((boys > 0) && (girls > 0))
+				{
+					enough = true;
+					System.out.println();
+					System.out.println("Family number " + i + " has " + (boys + girls) + " kids");
+					sumKidsAvrege = sumKidsAvrege + boys + girls;
+					if((boys + girls) < 3)
+						{
+							TwoMembers++;
+						}
+						else
+						{
+							if((boys + girls) == 3)
+							{
+								ThreeMembers++;
+							}
+							else
+							{
+								FourOrMoreMembers++;
+							}
+						}
+				}
+			}
+			i++;
+			enough = false;
+			boys = 0;
+			girls = 0;
+		}
+		double FamForAvg = families;
+
+		System.out.println("Average: " + (sumKidsAvrege/FamForAvg) + " children to get at least one of each gender.");
+
+		System.out.println("Number of families with 2 children: " + TwoMembers);
+		System.out.println("Number of families with 3 children: " + ThreeMembers);
+		System.out.println("Number of families with 4 or more children: " + FourOrMoreMembers);
+
+		if((TwoMembers >= ThreeMembers) && (TwoMembers >= FourOrMoreMembers))
+			{
+				System.out.println("The most common number of children is 2.");
+			}
+			else
+			{
+				if(ThreeMembers >= FourOrMoreMembers)
+				{
+					System.out.println("The most common number of children is 3.");
+				}
+				else
+					System.out.println("The most common number of children is 4 or more.");
+			}
 	}
 }
