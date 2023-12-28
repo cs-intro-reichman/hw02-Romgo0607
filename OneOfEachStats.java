@@ -11,11 +11,12 @@ public class OneOfEachStats
 {
 	public static void main (String[] args) 
 	{
-
 		int families = Integer.parseInt(args[0]);
 		int seed = Integer.parseInt(args[1]);
+		Random generator = new Random(seed);
 		int i = 1;
 
+		//int boyORgirl;
 		int boys = 0;
 		int girls = 0;
 
@@ -31,26 +32,25 @@ public class OneOfEachStats
 		{
 			while(enough == false)
 			{
-				Random generetor = new Random(seed);
-				double boyORgirl = generetor.nextDouble() * 2; 
-				System.out.print(boyORgirl);
-				boyORgirl = (int)(Math.random() * 2);
+				//boyORgirl = (int)(Math.random() * 2);
+				double boyORgirl = (int)(generator.nextDouble()*2);
+
 				if(boyORgirl == 0)
 				{
-					System.out.print("g ");
+					//System.out.print("g ");
 					girls++;
 				}
 				else
 				{
-					System.out.print("b ");
+					//System.out.print("b ");
 					boys++;
 				}
 
 				if((boys > 0) && (girls > 0))
 				{
 					enough = true;
-					System.out.println();
-					System.out.println("Family number " + i + " has " + (boys + girls) + " kids");
+					//System.out.println();
+					//System.out.println("Family number " + i + " has " + (boys + girls) + " kids");
 					sumKidsAvrege = sumKidsAvrege + boys + girls;
 					if((boys + girls) < 3)
 						{
